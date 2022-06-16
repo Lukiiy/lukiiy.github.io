@@ -33,3 +33,7 @@ header{
     font-weight: bold;
     margin-right: 15px;
 }
+
+body {
+    background-color: #212121;
+    }
