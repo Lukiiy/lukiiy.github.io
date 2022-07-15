@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="assets/fav/favicon.ico">
-        <link rel="manifest" href="assets/fav/site.webmanifest">
+        <link rel="icon" type="image/svg+xml" href="/assets/fav/favicon.svg">
+        <link rel="icon" href="/assets/fav/favicon.ico">
         <link rel="stylesheet" href="assets/icons-minecraft-0.5.css">
         <meta charset="utf-8">
         <meta name=viewport content="width=device-width, initial-scale=1">
@@ -11,32 +11,44 @@
         <title>Luk 💙</title>
         <style>
             body {
-                background-color: #70acff;
+                background-color: hsl(215, 100%, 72%);
                 font-family: Verdana, sans-serif;
                 overflow: hidden;
                 margin: 0;
                 padding: 0;
                 line-height: 1.0;
-                color: #ffffff
+                color: #000000;
             }
             h1.main {
                 font-size: 200%;
                 font-family: Verdana;
             }
+            .nightmode {
+                background-color: hsl(215, 70%, 40%);
+                color: hsl(0, 0%, 9%);
+            }
         </style>
+        <script>
+            function toggledarklight() {
+                var element = document.body;
+                element.classList.toggle("nightmode");
+            }
+        </script>
     </head> 
     <body>
-        <article>
-            <main>
-                <h1 class="main"><div class="inline-block"><span style="background-color: #5919c8;"><strong><span style="color: #24bdff;">Luk's <em>Website</em></span> 💙</strong></span> <i class="icon-minecraft icon-minecraft-diamond-pickaxe"></i></div></h1>
-                <p><span style="color: #ffffff;">just another dumb website :D</span></p>
-                <p><span style="color: #ffffff;">a</span></p>
-                <br>
-                <p><a title="AppleCatcher" href="https://lukiiy.github.io/applecatcher"><span style="color: #eb4034;">[Game]</span> 🍎✋ Apple Catcher</a></p>
-                <p><a title="Cobblestoroids" href="https://lukiiy.github.io/cobblestoroids"><span style="color: #eb4034;">[Game]</span> 🚀⬛ Cobblestoroids</a></p>
-                <p><a title="Cobblestoroids" href="https://lukiiy.github.io/cobblestoroids"><span style="color: #eb4034;">[Game]</span> 🍪🖱️ Cookie Clicker</a></p>
-                <p>🔹 Thanks for visiting! 🙃</p>
-            </main>
-        </article>
+        <main>
+            <h1 class="main"><div class="inline-block"><span style="background-color: #5919c8;"><strong><span style="color: #24bdff;">Luk's <em>Website</em></span> 💙</strong></span> <i class="icon-minecraft icon-minecraft-diamond-pickaxe"></i></div></h1>
+            <p>just another dumb website :D</p>
+            <div class="inline-block"><p>I'm someone who makes cool things, like games and mod other games</p><i class="icon-minecraft-sm icon-minecraft-command-block"></i></div>
+        </main>
+        <div class="inline-block"><p>⚙️ Options:</p> <button onclick="toggledarklight()">Toggle 💡</button></div>
+        <noscript>➡️ Your browser does not support JavaScript! 🚫</noscript>
+        <br>
+        <section>
+            <p><a title="AppleCatcher" href="https://lukiiy.github.io/applecatcher"><span style="color: #eb4034;">[Game]</span> 🍎✋ Apple Catcher</a></p>
+            <p><a title="Cobblestoroids" href="https://lukiiy.github.io/cobblestoroids"><span style="color: #eb4034;">[Game]</span> 🚀⬛ Cobblestoroids</a></p>
+            <p><a title="Cobblestoroids" href="https://lukiiy.github.io/cookieclicker"><span style="color: #eb4034;">[Game]</span> 🍪🖱️ Cookie Clicker</a></p>
+            <p>🔹 Thanks for visiting! 🙃</p>
+        </section>
     </body>
 </html>
