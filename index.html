@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/keeping/favicon.png" sizes="16x16">
+  <meta name="apple-mobile-web-app-title" content="Lukiiy's Github Website">
+  <meta name="application-name" content="Lukiiy's Github Website">
+  <meta name="author" content="Lukiiy">
+  <link rel="stylesheet" href="/material.css">
+  <title>Lukiiy 💙</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/7.0.5/marked.min.js"></script>
+  <style>
+    #bubbles {
+      width: 8em;
+      top: 0;
+      left: 0;
+    }
+    #line {
+      width: 8em;
+      bottom: -24px;
+      left: -24px;
+      z-index: 1;
+    }
+    #sparkly {
+      top: -16px;
+      right: -16px;
+      z-index: 1;
+      width: 3.5rem;
+    }
+    #🖼️ {
+      border-radius: 100%;
+      width: 15rem;
+      margin: 0;
+      padding: 0;
+      transition: all .5s ease-in-out;
+      cursor: pointer;
+    }
+    #🖼️:hover {border-radius: 1.25rem;}
+    @media only screen and (max-width: 332px) {
+      #🖼️ {width: 75%;}
+    }
+  </style>
+</head>
+<body>
+  <img src="/keeping/corner1.svg" class="bge" id="bubbles">
+  <img src="https://avatars.githubusercontent.com/u/102190774" id="🖼️" alt="My Github pfp!">
+  <div class="box">
+    <img src="/keeping/sparklez.svg" class="bge" id="sparkly">
+    <img src="/keeping/line1.svg" class="bge" id="line">
+    <div id="readme"></div>
+  </div>
+  <script>
+    console.log("Woah!");
+
+    const url = 'https://raw.githubusercontent.com/Lukiiy/Lukiiy/main/';
+    const render = new marked.Renderer();
+    render.image = function(href, title, text) {return '<img src="' + url + href + '" alt="' + text + '">';};
+
+    fetch(url + 'README.md')
+    .then(response => response.text())
+    .then(text => {
+      const md = marked.parse(text, { renderer: render });
+      document.querySelector('#readme').innerHTML = md;
+    });
+  </script>
+</body>
+</html>
