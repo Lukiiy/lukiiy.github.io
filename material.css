@@ -1,18 +1,11 @@
 html {color-scheme: dark;}
 body {
   display: flex;
-  justify-content: center;
   place-items: center;
   flex-direction: column;
   image-rendering: pixelated;
-  font-family: system-ui, sans-serif;
+  font-family: sans-serif, system-ui;
   background-color: #1E1E1E;
-}
-img, video, svg {
-  display: block;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
 }
 .box {
   border-radius: 0.875rem;
