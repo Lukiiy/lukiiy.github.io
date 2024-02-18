@@ -3,66 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="/keeping/favicon.png" sizes="16x16">
-  <meta name="apple-mobile-web-app-title" content="Lukiiy's Github Website">
-  <meta name="application-name" content="Lukiiy's Github Website">
   <meta name="author" content="Lukiiy">
-  <link rel="stylesheet" href="/material.css">
-  <title>Lukiiy 💙</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <style>
-    #bubbles {
-      width: 8em;
-      top: 0;
-      left: 0;
-    }
-    #line {
-      width: 8em;
-      bottom: -24px;
-      left: -24px;
-      z-index: 1;
-    }
-    #sparkly {
-      top: -16px;
-      right: -16px;
-      z-index: 1;
-      width: 3.5rem;
-    }
-    #🖼️ {
-      border-radius: 100%;
-      width: 15rem;
-      margin: 0;
-      padding: 0;
-      transition: all .5s ease-in-out;
-      cursor: pointer;
-    }
-    #🖼️:hover {border-radius: 1.25rem;}
-    @media only screen and (max-width: 332px) {
-      #🖼️ {width: 75%;}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#1B1B25">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lukiiy's Github page">
+  <meta property="og:image" content="https://lukiiy.github.io/keeping/favicon.png">
+  <title>Lukiiy's Github page</title>
 </head>
 <body>
-  <img src="/keeping/corner1.svg" class="bge" id="bubbles">
-  <img src="https://avatars.githubusercontent.com/u/102190774" id="🖼️" alt="My Github pfp!">
-  <div class="box">
-    <img src="/keeping/sparklez.svg" class="bge" id="sparkly">
-    <img src="/keeping/line1.svg" class="bge" id="line">
-    <div id="readme"></div>
-  </div>
-  <script>
-    console.log("Woah!");
-
-    const url = 'https://raw.githubusercontent.com/Lukiiy/Lukiiy/main/';
-    const render = new marked.Renderer();
-    render.image = function(href, title, text) {return '<img src="' + url + href + '" alt="' + text + '">';};
-
-    fetch(url + 'README.md')
-    .then(response => response.text())
-    .then(text => {
-      const md = marked.parse(text, { renderer: render });
-      document.querySelector('#readme').innerHTML = md;
-    });
-  </script>
+  <main>
+    <!-- <img src="https://avatars.githubusercontent.com/u/102190774"> -->
+    <h1>Lukiiy</h1>
+    <p>Developer • Designer • Gamer</p>
+    <div class="line"></div>
+    <div class="flex">
+      <a href="https://github.com/Lukiiy" title="Github"><button><img src="keeping/github-mark-white.png" alt="Github"></button></a>
+      <a href="https://lukiiy.netlify.app/" title="Website"><button><img src="keeping/place.png" alt="Website"></button></a>
+    </div>
+  </main>
 </body>
+<script>
+  console.log("Woah!");
+</script>
 </html>
